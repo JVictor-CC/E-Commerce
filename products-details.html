@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulls Sports</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/costum.css">
+</head>
+<body class="flex">
+    <header class="flex navbar">
+        <div class="logo">    
+            <img src="images/logo.png" width="200px">
+        </div>
+        
+        <nav class="menu-items">
+            <ul class="flex menu-toggler">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>     
+            </ul>
+        </nav> 
+        <div class="cart-btn">
+            <a href="cart.html"><img src="images/cart-white.png" width="28px"><div class="cart-items">0</div></a>
+        </div>
+        <img class="menu-icon" src="images/menu-white.png" alt="menu icon">
+    </header>
+
+    <main>
+        <div class="sub-nav">
+            <ul class="flex">
+                <li><a href="#">Sportes</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Clothes</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Equipments</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Outlet</a></li>
+            </ul>
+        </div>
+        <section class="main-section">
+            <div class="prod-details">
+                <div class="flex">
+                    <div class="flex details-col">
+                        <div>
+                            <div><img src="images/gallery-1.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-1.jpg')"></div>
+                            <div><img src="images/gallery-2.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-2.jpg')"></div>
+                            <div><img src="images/gallery-3.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-3.jpg')"></div>
+                            <div><img src="images/gallery-4.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-4.jpg')"></div>
+                        </div>
+                        <div>
+                            <img src="images/gallery-1.jpg" width="100%" id="prod-img">
+                        </div>
+                        
+                    </div>
+                    <div class="details-col">    
+                        <h1>Red Printed T-shirt</h1>
+                        <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                        <p class="text">$50.00</p>
+                        <select name="size" id="">
+                            <option value="">XXL</option>
+                            <option value="">XL</option>
+                            <option value="">Large</option>
+                            <option value="">Medium</option>
+                            <option value="">Small</option>
+                        </select>
+                        <input type="number" value="1">
+                        <p class="btn">Add to cart</p>
+                        <h2>Product Details</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, molestias incidunt. Modi odit quis eum! Nisi doloribus corrupti, expedita soluta nihil fugit totam molestiae veritatis, quasi, consequuntur cum laborum? Voluptatem?</p>
+                    </div>  
+                </div>
+                <div class="related-section">
+                    <h2>Related Products</h2>
+                    <div class="related-img flex">
+                        <div class="prod-images-col">
+                            <img src="images/product-4.jpg" alt="" width="100%">
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <img src="images/product-6.jpg" alt="" width="100%">
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <img src="images/product-12.jpg" alt="" width="100%">
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <img src="images/product-3.jpg" alt="" width="100%">
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <img src="images/product-5.jpg" alt="" width="100%">
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>view more.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex">
+        <div class="col-footer">
+            <h3>Download our APP</h3>
+            <a href="#"><img src="images/app-store.png" alt="App store link" width="130"></a>
+            <br>
+            <a href="#"><img src="images/play-store.png" alt="Play store link" width="130"></a>
+        </div>
+        <div class="col-footer">
+            <h3>Useful links</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Store Policy</a></li>
+                <li><a href="#">Payments</a></li>
+            </ul>
+        </div>
+        <div class="col-footer">
+            <h3>Bulls Sports</h3>
+            <ul>
+                <li>Tel: (12) 34567-8910</li>
+                <li>Email: contact@bullsports.com</li>
+            </ul>
+        </div>
+        <div class="col-footer">
+            <form>
+                <h3>Subscribe to our Newsletter</h3>
+                <input type="email" placeholder="Exemple@email.com" required>
+                <input type="submit">
+            </form>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+:root{
+    
+    --layout-backcolor: #192537;
+    --navlink-color:#ffffff;
+    --main-backcolor: #192537;
+    --main-textcolor: #ffffff;
+    --footer-textcolor: #b09e80;
+    --footer-backcolor: #000;
+    --star-color: #cc9f09;
+    /*
+    --layout-backcolor: #fff;
+    --navlink-color:#192537;
+    --main-textcolor: #192537;
+    --footer-textcolor: #b09e80;
+    --footer-backcolor: #000;
+    --star-color: #cc9f09;
+    */
+}
+
+html, body{
+    height: 100%;
+    font-size: 100%;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; 
+    flex-direction: column;
+    background: linear-gradient(to right, #e6f0ff, #d2e4ff) ;
+}
+
+  /*******************/
+ /*     header      */
+/*******************/
+
+.navbar{
+    position: fixed;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    background-color: var(--layout-backcolor); 
+    box-shadow: 0 0 1em #100e29;
+}
+
+.logo{
+    margin-left: 50px;
+}
+
+.menu-items{
+    padding: 10px;
+    flex: 1;
+}
+
+.menu-items ul{
+    justify-content: right;
+}
+
+.menu-items a{
+    color: var(--navlink-color);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-inline: 2px;
+}
+
+
+.menu-items a:hover{
+    color: #192537;
+    background-color: #fff4e5;
+    transition: 0.5s;
+}
+
+.cart-btn{
+    padding: 4px;
+    border-radius: 5px;
+    transition: 1s;
+    margin-right: 20px;
+    position: relative;
+}
+
+.cart-btn:hover{
+    filter: invert();
+    background-color: #000b1a;
+    transition: 0.5s;
+}
+
+.cart-items{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff4e5;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.menu-icon{
+    width: 40px;
+    display: none;
+}
+
+  /*******************/
+ /*     Footer      */
+/*******************/
+
+footer{
+    background-color: var(--footer-backcolor);
+    min-height: 120px;
+    box-shadow: 0 0 1em rgb(16, 14, 41);
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+}
+
+.col-footer{
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 40px 50px 20px 50px;
+    color: var(--footer-textcolor);
+    line-height: 22px;
+    font-size: 13px;
+}
+
+.col-footer a{
+    color: var(--footer-textcolor);
+}
+
+.col-footer a:hover{
+   text-decoration: underline;
+}
+
+.col-footer h3{
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type=email]{
+    padding: 5px 15px;
+    border-radius: 5px;
+    min-width: 180px;
+    width: 100%;
+}
+
+input[type=submit]{
+    margin: 5px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+  /********************/
+ /*  Costum classes  */
+/********************/
+main{
+    margin-top: 80px;
+}
+
+.main-section{
+    background-color: var(--main-backcolor);
+    color: var(--main-textcolor);
+    text-align: center;
+    min-height: 400px;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+}
+
+#star{
+    font-weight: bolder;
+    color: var(--star-color);
+}
+
+.btn{
+    display: inline-block;
+    background: linear-gradient(#192537, #40064e);
+    padding: 12px;
+    border-radius: 50px;
+    color: white;
+    margin-bottom: 10px; 
+    margin-top: 20px;
+}
+
+.btn:hover{
+    transition: 0.5s;
+    color: #eacaf1;
+    cursor: pointer;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.title-line{
+    width: 120px;
+    height: 4px;
+    border-radius: 8px;
+    background: #ffffffdc;
+    margin: 10px auto 42px auto;
+}
+
+.text{
+    line-height: 25px;
+}
+
+.grid{
+    display: grid;
+}
+
+.flex{
+    display: flex;
+}
+
+section{
+    flex: 1 0 auto;
+}
+
+hr{
+    color: lightgray;
+    margin: 10px 0;
+}
+
+.cart-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    transition: 0.5s;
+    background: #808080;
+    z-index: 2;
+    /*visibility: hidden;*/
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    overflow-y: scroll;
+    background: #808080;
+    z-index: 3;
+    padding: 20px;
+    transition: 0.5s;
+    /*transform: translateX(100%);*/
+}
+
+.cart-close{
+
+}
+
+.cart-content{
+
+}
+
+.cart-item{
+
+}
+
+
+
+
+  /**************************/
+ /*       Media Query      */
+/**************************/
+
+@media screen and (max-width:1100px) {
+    .home-section{
+        padding: 0;
+    }
+    .col{
+        flex-basis: 50%;
+    }
+    .col h1{
+        font-size: 48px;
+    }
+    .col p{
+        font-size: 20px;
+    }
+
+    .home-images{
+        flex-basis: 40%;
+    }
+
+    .offer{
+        width: 100%;
+    }
+
+
+    .details-col{
+        flex-basis: 90%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    
+    .main-section{
+        padding: 50px 0;
+    }
+
+    .menu-icon{
+        display: inline;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: #2e2e3f solid 2px;
+        border-radius: 5px;
+        padding: 3px;
+        transition: 1.5s;
+    }
+    .menu-icon:hover{
+        cursor: pointer;
+        background-color: #000b1a;
+        filter: invert();
+    }
+
+    .cart-btn{
+        transform: translateX(-60px);
+        transition: 0.5s;
+    }
+
+    .menu-items ul{
+        height: 0px;
+        overflow: hidden;
+        flex-direction: column; 
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        transition: 0.5s;
+    }
+
+    .menu-items a{
+        background: #808080;
+        display: block;
+        text-align: center;
+        padding: 10px 30px;
+        border: #000b1a solid 1px;
+        border-radius: 0px;
+    }
+
+    .menu-toggler.active{
+        height: 200px;
+        transition: 0.5s;
+    }
+
+    .col{
+        flex-basis: 100%;
+    }
+
+    .about p{
+        padding-inline: 20px;
+    }
+
+    .home-images{
+        flex-basis: 60%;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .home-images{
+        flex-basis: 80%;
+    }
+
+    .prod-images-col{
+        min-width: 170px;
+    }
+}

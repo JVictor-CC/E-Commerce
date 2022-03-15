@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulls Sports</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/costum.css">
+</head>
+<body class="flex">
+    <header class="flex navbar">
+        <div class="logo">    
+            <img src="images/logo.png" width="200px">
+        </div>
+        
+        <nav class="menu-items">
+            <ul class="flex menu-toggler">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>     
+            </ul>
+        </nav> 
+        <div class="cart-btn">
+            <a href="cart.html"><img src="images/cart-white.png" width="28px"><div class="cart-items">0</div></a>
+        </div>
+        <img class="menu-icon" src="images/menu-white.png" alt="menu icon">
+    </header>
+
+    <!--Cart-->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="cart-close"></span>
+            <h1>your cart</h1>
+            <div class="cart-content">
+                <div class="cart-item">
+                    <img src="images/product-1.jpg" alt="product">
+                    <div>
+                        <h1>Red Printed T-shirt</h1>
+                        <h2>$50.00</h2>
+                        <span class="remove-item">remove</span>
+                    </div>
+                    <div>
+                        <span>&xwedge;</span>
+                        <p class="item-amount">1</p>
+                        <span>&xvee;</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cart-footer">
+                <h3>your total: $ <span class="cart-total">0</spanc></h3>
+                <button class="cart-clear"></button>
+                <a class="cart-checkout" href=""></a>
+            </div>
+        </div>
+    </div>
+    <!--Cart-->
+
+    <main>
+        <div class="sub-nav">
+            <ul class="flex">
+                <li><a href="#">Sportes</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Clothes</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Equipments</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Outlet</a></li>
+            </ul>
+        </div>
+        <section class="main-section">
+            <div class="grid main-prod">
+                <div class="flex prod-top">
+                    <h1>All Products</h1>
+                    <select name="" id="">
+                        <option value="">Default shorting</option>
+                        <option value="">Short by price</option>
+                        <option value="">Short by popularity</option>
+                        <option value="">Short bu rating</option>
+                        <option value="">Short by sale</option>
+                    </select>
+                </div>
+                <div class="flex">
+                    <div class="prod-cat">
+                        <div class="cat-box">
+                            <h1>Categories</h1>
+                            <label for="category1"><input id="category1" type="checkbox" name="category"> Shoes</label>
+                            <label for="category2"><input id="category2" type="checkbox" name="category"> Clothes</label>
+                            <label for="category3"><input id="category3" type="checkbox" name="category"> Accessories</label>
+                            <label for="category4"><input id="category4" type="checkbox" name="category"> Equipments</label>
+                            <label for="category5"><input id="category5" type="checkbox" name="category"> Outlet</label>
+                        </div>
+                        <div class="cat-box">
+                            <h1>Price</h1>
+                            <label for="price1"><input id="price1" type="checkbox" name="price"> &lt; $20.00</label>
+                            <label for="price2"><input id="price2" type="checkbox" name="price"> $20.00 - $50.00</label>
+                            <label for="price3"><input id="price3" type="checkbox" name="price"> $20.00 - $100.00</label>
+                            <label for="price4"><input id="price4" type="checkbox" name="price"> $100.00 - $500.00</label>
+                            <label for="price5"><input id="price5" type="checkbox" name="price"> &gt; $500.00</label>
+                        </div>
+                        <div class="cat-box">
+                            <h1>Brands</h1>
+                            <input type="search" name="" id="">
+                            <label for="brand1"><input id="brand1" type="checkbox" name="brand"> Shoes</label>
+                            <label for="brand2"><input id="brand2" type="checkbox" name="brand"> Clothes</label>
+                            <label for="brand3"><input id="brand3" type="checkbox" name="brand"> Accessories</label>
+                            <label for="brand4"><input id="brand4" type="checkbox" name="brand"> Equipments</label>
+                            <label for="brand5"><input id="brand5" type="checkbox" name="brand"> Outlet</label>
+                        </div>
+                    </div>
+                    <div class="prod-items flex">
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-1.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="1">add to cart</button>
+                            </div>
+                            <a href="products-details.html"><p>Red Printed T-shirt</p></a>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-2.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="2">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-3.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="3">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-4.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="4">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-5.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="5">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-6.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="6">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-7.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="7">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-8.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="8">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-9.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="9">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-10.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="10">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-11.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="11">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                        <div class="prod-images-col">
+                            <div>
+                                <img class="prod-img" src="images/product-12.jpg" alt="product" width="100%">
+                                <button class="bag-btn" data-id="12">add to cart</button>
+                            </div>
+                            <p>Red Printed T-shirt</p>
+                            <p>$50.00</p>
+                            <div>
+                                <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-btn">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>&#8594;</span>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="flex">
+        <div class="col-footer">
+            <h3>Download our APP</h3>
+            <a href="#"><img src="images/app-store.png" alt="App store link" width="130"></a>
+            <br>
+            <a href="#"><img src="images/play-store.png" alt="Play store link" width="130"></a>
+        </div>
+        <div class="col-footer">
+            <h3>Useful links</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Store Policy</a></li>
+                <li><a href="#">Payments</a></li>
+            </ul>
+        </div>
+        <div class="col-footer">
+            <h3>Bulls Sports</h3>
+            <ul>
+                <li>Tel: (12) 34567-8910</li>
+                <li>Email: contact@bullsports.com</li>
+            </ul>
+        </div>
+        <div class="col-footer">
+            <form>
+                <h3>Subscribe to our Newsletter</h3>
+                <input type="email" placeholder="Exemple@email.com" required>
+                <input type="submit">
+            </form>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
