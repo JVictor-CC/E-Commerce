@@ -83,14 +83,20 @@ class Display{
     } 
 }
 
-// Local Storage
+// Create a Local Storage for this project
 class Storage{
-
+    static saveCart(products){
+        localStorage.setItem("products", JSON.stringify(products));
+    }
+    
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const display = new Display();
     const products = new Products();
 
-    products.getProducts().then(products => display.displayProducts(products));
+    products.getProducts().then(products => {
+        display.displayProducts(products);
+        Storage.saveCart(products);
+    });
 });
