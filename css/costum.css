@@ -77,6 +77,7 @@ body{
     transition: 1s;
     margin-right: 20px;
     position: relative;
+    cursor: pointer;
 }
 
 .cart-btn:hover{
@@ -85,7 +86,7 @@ body{
     transition: 0.5s;
 }
 
-.cart-items{
+.cart-quant{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -221,44 +222,98 @@ hr{
     margin: 10px 0;
 }
 
-.cart-overlay{
+.cartoverlay{
     position: fixed;
     top: 0;
     right: 0;
-    width: 25%;
+    width: 30%;
     height: 100%;
     transition: 0.5s;
-    background: #808080;
+    background: lightgray;
     z-index: 2;
-    /*visibility: hidden;*/
+   /* visibility: hidden;*/
 }
 
 .cart{
     position: fixed;
     top: 0;
     right: 0;
-    width: 25%;
+    width: 30%;
     height: 100%;
     overflow-y: scroll;
-    background: #808080;
+    background: lightgray;
     z-index: 3;
     padding: 20px;
     transition: 0.5s;
-    /*transform: translateX(100%);*/
+    transform: translateX(100%);
+    color: var(--layout-backcolor);
 }
 
-.cart-close{
-
+.cart.cart-toggler{
+    transform: translateX(0);
 }
 
-.cart-content{
+.cart h1{
+    text-align: center;
+    font-size: 48px;
+    padding: 15px;
+}
 
+.cart h3{
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
 }
 
 .cart-item{
-
+    border: solid 1px #c0c0c0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 20px;
+    padding: 10px;
+    margin: 2px;
 }
 
+.cart-item img{
+    width: 80px;
+    height: 100%;
+}
+
+.cart-footer{
+    text-align: center;
+}
+
+.cart-close{
+    background: var(--layout-backcolor);
+    color: #fff;
+    padding: 0 6px;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 1px #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-item{
+    color: gray;
+    cursor: pointer;
+}
+
+.item-amount{
+    text-align: center;
+}
+
+.amount-up, .amount-down{
+    color: var(--layout-backcolor);
+    cursor: pointer;
+}
+
+.cart-clear{
+    font-size: 18px;
+    padding-inline: 50px;
+    border-radius: 0px;
+}
 
 
 
@@ -340,7 +395,7 @@ hr{
         border-radius: 0px;
     }
 
-    .menu-toggler.active{
+    .menu.menu-toggler{
         height: 200px;
         transition: 0.5s;
     }
@@ -355,6 +410,11 @@ hr{
 
     .home-images{
         flex-basis: 60%;
+    }
+
+
+    .cart,.cart-overlay{
+        width: 100%;
     }
 }
 

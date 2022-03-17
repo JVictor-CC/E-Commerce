@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
         </div>
         
         <nav class="menu-items">
-            <ul class="flex menu-toggler">
+            <ul class="flex menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About</a></li>
@@ -25,7 +25,7 @@
             </ul>
         </nav> 
         <div class="cart-btn">
-            <a href="cart.html"><img src="images/cart-white.png" width="28px"><div class="cart-items">0</div></a>
+            <img src="images/cart-white.png" width="28px"><div class="cart-quant">0</div>
         </div>
         <img class="menu-icon" src="images/menu-white.png" alt="menu icon">
     </header>
@@ -33,27 +33,27 @@
     <!--Cart-->
     <div class="cart-overlay">
         <div class="cart">
-            <span class="cart-close"></span>
+            <span class="cart-close">&times;</span>
             <h1>your cart</h1>
             <div class="cart-content">
                 <div class="cart-item">
                     <img src="images/product-1.jpg" alt="product">
                     <div>
-                        <h1>Red Printed T-shirt</h1>
+                        <h2>Red Printed T-shirt</h2>
                         <h2>$50.00</h2>
                         <span class="remove-item">remove</span>
                     </div>
                     <div>
-                        <span>&xwedge;</span>
+                        <span class="amount-up">&xwedge;</span>
                         <p class="item-amount">1</p>
-                        <span>&xvee;</span>
+                        <span class="amount-down">&xvee;</span>
                     </div>
                 </div>
 
             </div>
             <div class="cart-footer">
                 <h3>your total: $ <span class="cart-total">0</spanc></h3>
-                <button class="cart-clear"></button>
+                <button class="btn cart-clear">clear cart</button>
                 <a class="cart-checkout" href=""></a>
             </div>
         </div>
@@ -112,22 +112,25 @@
                             <label for="brand5"><input id="brand5" type="checkbox" name="brand"> Outlet</label>
                         </div>
                     </div>
-                    <div class="prod-items flex">
-                        <div class="prod-images-col">
+                    <!--Products List-->
+                    <div class="prod-items">
+                        <!--
+                        <article class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-1.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="1">add to cart</button>
+                                <button  class="bag-btn" data-id="prod1">add to cart</button>
                             </div>
                             <a href="products-details.html"><p>Red Printed T-shirt</p></a>
                             <p>$50.00</p>
                             <div>
                                 <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
                             </div>
-                        </div>
+                        </article>
+
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-2.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="2">add to cart</button>
+                                <button class="bag-btn" data-id="prod2">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -138,7 +141,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-3.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="3">add to cart</button>
+                                <button class="bag-btn" data-id="prod3">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -149,7 +152,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-4.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="4">add to cart</button>
+                                <button class="bag-btn" data-id="prod4">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -160,7 +163,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-5.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="5">add to cart</button>
+                                <button class="bag-btn" data-id="prod5">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -171,7 +174,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-6.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="6">add to cart</button>
+                                <button class="bag-btn" data-id="prod6">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -182,7 +185,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-7.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="7">add to cart</button>
+                                <button class="bag-btn" data-id="prod7">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -193,7 +196,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-8.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="8">add to cart</button>
+                                <button class="bag-btn" data-id="prod8">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -204,7 +207,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-9.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="9">add to cart</button>
+                                <button class="bag-btn" data-id="prod9">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -215,7 +218,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-10.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="10">add to cart</button>
+                                <button class="bag-btn" data-id="prod10">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -226,7 +229,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-11.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="11">add to cart</button>
+                                <button class="bag-btn" data-id="prod11">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -237,7 +240,7 @@
                         <div class="prod-images-col">
                             <div>
                                 <img class="prod-img" src="images/product-12.jpg" alt="product" width="100%">
-                                <button class="bag-btn" data-id="12">add to cart</button>
+                                <button class="bag-btn" data-id="prod12">add to cart</button>
                             </div>
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -245,6 +248,7 @@
                                 <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
                 <div class="page-btn">

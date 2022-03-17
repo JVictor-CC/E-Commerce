@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,10 +25,41 @@
             </ul>
         </nav> 
         <div class="cart-btn">
-            <a href="cart.html"><img src="images/cart-white.png" width="28px"><div class="cart-items">0</div></a>
+            <img src="images/cart-white.png" width="28px"><div class="cart-quant">0</div>
         </div>
         <img class="menu-icon" src="images/menu-white.png" alt="menu icon">
     </header>
+    
+    <!--Cart-->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="cart-close">&times;</span>
+            <h1>your cart</h1>
+            <div class="cart-content">
+                <div class="cart-item">
+                    <img src="images/product-1.jpg" alt="product">
+                    <div>
+                        <h2>Red Printed T-shirt</h2>
+                        <h2>$50.00</h2>
+                        <span class="remove-item">remove</span>
+                    </div>
+                    <div>
+                        <span class="amount-up">&xwedge;</span>
+                        <p class="item-amount">1</p>
+                        <span class="amount-down">&xvee;</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cart-footer">
+                <h3>your total: $ <span class="cart-total">0</spanc></h3>
+                <button class="btn cart-clear">clear cart</button>
+                <a class="cart-checkout" href=""></a>
+            </div>
+        </div>
+    </div>
+    <!--Cart-->
+
     <main>
         <section class="flex home-section">
             <div class="col">

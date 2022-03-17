@@ -111,6 +111,7 @@ input[type="checkbox"]:checked::after{
 }
 
 .prod-items{
+    display: flex;
     flex-basis: 80%;
     justify-content: center;
     flex-wrap: wrap;
