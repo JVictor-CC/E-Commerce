@@ -86,7 +86,7 @@ body{
     transition: 0.5s;
 }
 
-.cart-quant{
+.cart-amount{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -176,16 +176,16 @@ main{
     display: inline-block;
     background: linear-gradient(#192537, #40064e);
     padding: 12px;
-    border-radius: 50px;
     color: white;
     margin-bottom: 10px; 
     margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .btn:hover{
     transition: 0.5s;
-    color: #eacaf1;
-    cursor: pointer;
+    color: #969690;
 }
 
 .title{
@@ -239,6 +239,7 @@ hr{
     top: 0;
     right: 0;
     width: 30%;
+    min-width: 320px;
     height: 100%;
     overflow-y: scroll;
     background: lightgray;
@@ -249,7 +250,7 @@ hr{
     color: var(--layout-backcolor);
 }
 
-.cart.cart-toggler{
+.cart-toggler{
     transform: translateX(0);
 }
 

@@ -142,11 +142,11 @@ input[type="checkbox"]:checked::after{
     transition: 0.6s;
 }
 
-.prod-images-col:hover .bag-btn{
+.prod-images-col:hover .slide-btn{
     transform: translateX(0);
 }
 
-.bag-btn{
+.slide-btn{
     position: absolute;
     top: 70%;
     right: 0;
@@ -161,7 +161,7 @@ input[type="checkbox"]:checked::after{
     transition: 0.5s;
 }
 
-.bag-btn:hover{
+.slide-btn:hover{
     background-color: #11042e;
 }
 
