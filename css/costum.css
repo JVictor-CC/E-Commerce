@@ -1,5 +1,4 @@
 :root{
-    
     --layout-backcolor: #192537;
     --navlink-color:#ffffff;
     --main-backcolor: #192537;
@@ -7,14 +6,6 @@
     --footer-textcolor: #b09e80;
     --footer-backcolor: #000;
     --star-color: #cc9f09;
-    /*
-    --layout-backcolor: #fff;
-    --navlink-color:#192537;
-    --main-textcolor: #192537;
-    --footer-textcolor: #b09e80;
-    --footer-backcolor: #000;
-    --star-color: #cc9f09;
-    */
 }
 
 html, body{
@@ -86,15 +77,7 @@ body{
     transition: 0.5s;
 }
 
-.cart-amount{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: #fff4e5;
-    padding: 0 5px;
-    border-radius: 5px;
-    color: #000;
-}
+
 
 .menu-icon{
     width: 40px;
@@ -222,18 +205,6 @@ hr{
     margin: 10px 0;
 }
 
-.cartoverlay{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    transition: 0.5s;
-    background: lightgray;
-    z-index: 2;
-   /* visibility: hidden;*/
-}
-
 .cart{
     position: fixed;
     top: 0;
@@ -264,6 +235,16 @@ hr{
     text-align: center;
     font-size: 25px;
     padding: 15px;
+}
+
+.cart-amount{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff4e5;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #000;
 }
 
 .cart-item{
@@ -311,6 +292,11 @@ hr{
 }
 
 .cart-clear{
+    font-size: 18px;
+    padding-inline: 50px;
+    border-radius: 0px;
+}
+.cart-checkout{
     font-size: 18px;
     padding-inline: 50px;
     border-radius: 0px;
@@ -414,7 +400,7 @@ hr{
     }
 
 
-    .cart,.cart-overlay{
+    .cart{
         width: 100%;
     }
 }

@@ -19,9 +19,9 @@
             <ul class="flex menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="account.html">Account</a></li>     
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Account</a></li>     
             </ul>
         </nav> 
         <div class="cart-btn">
@@ -31,7 +31,7 @@
     </header>
 
     <!--Cart-->
-    <div class="cart-overlay">
+    <div>
         <div class="cart">
             <span class="cart-close">&times;</span>
             <h1>your cart</h1>
@@ -53,9 +53,9 @@
                 -->
             </div>
             <div class="cart-footer">
-                <h3>your total: $ <span class="cart-total">0</spanc></h3>
+                <h3>your total: $ <span class="cart-total">0</span></h3>
                 <button class="btn cart-clear">clear cart</button>
-                <a class="cart-checkout" href=""></a>
+                <button class="btn cart-checkout">checkout</button>
             </div>
         </div>
     </div>
@@ -74,8 +74,8 @@
             </ul>
         </div>
         <section class="main-section">
-            <div class="grid main-prod">
-                <div class="flex prod-top">
+            <div class="grid main-products">
+                <div class="flex products-top">
                     <h1>All Products</h1>
                     <select name="" id="">
                         <option value="">Default shorting</option>
@@ -86,8 +86,8 @@
                     </select>
                 </div>
                 <div class="flex">
-                    <div class="prod-cat">
-                        <div class="cat-box">
+                    <div class="products-sidebar">
+                        <div class="sidebar-box">
                             <h1>Categories</h1>
                             <label for="category1"><input id="category1" type="checkbox" name="category"> Shoes</label>
                             <label for="category2"><input id="category2" type="checkbox" name="category"> Clothes</label>
@@ -95,7 +95,7 @@
                             <label for="category4"><input id="category4" type="checkbox" name="category"> Equipments</label>
                             <label for="category5"><input id="category5" type="checkbox" name="category"> Outlet</label>
                         </div>
-                        <div class="cat-box">
+                        <div class="sidebar-box">
                             <h1>Price</h1>
                             <label for="price1"><input id="price1" type="checkbox" name="price"> &lt; $20.00</label>
                             <label for="price2"><input id="price2" type="checkbox" name="price"> $20.00 - $50.00</label>
@@ -103,7 +103,7 @@
                             <label for="price4"><input id="price4" type="checkbox" name="price"> $100.00 - $500.00</label>
                             <label for="price5"><input id="price5" type="checkbox" name="price"> &gt; $500.00</label>
                         </div>
-                        <div class="cat-box">
+                        <div class="sidebar-box">
                             <h1>Brands</h1>
                             <input type="search" name="" id="">
                             <label for="brand1"><input id="brand1" type="checkbox" name="brand"> Shoes</label>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <!--Products List-->
-                    <div class="prod-items">
+                    <div class="products-items">
                         <!--
                         <article class="prod-images-col">
                             <div>

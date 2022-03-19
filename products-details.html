@@ -19,19 +19,19 @@
             <ul class="flex menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="account.html">Account</a></li>     
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Account</a></li>     
             </ul>
         </nav> 
         <div class="cart-btn">
-            <img src="images/cart-white.png" width="28px"><div class="cart-quant">0</div>
+            <img src="images/cart-white.png" width="28px"><div class="cart-amount">0</div>
         </div>
         <img class="menu-icon" src="images/menu-white.png" alt="menu icon">
     </header>
     
     <!--Cart-->
-    <div class="cart-overlay">
+    <div>
         <div class="cart">
             <span class="cart-close">&times;</span>
             <h1>your cart</h1>
@@ -53,9 +53,9 @@
                 -->
             </div>
             <div class="cart-footer">
-                <h3>your total: $ <span class="cart-total">0</spanc></h3>
+                <h3>your total: $ <span class="cart-total">0</span></h3>
                 <button class="btn cart-clear">clear cart</button>
-                <a class="cart-checkout" href=""></a>
+                <button class="btn cart-checkout">checkout</button>
             </div>
         </div>
     </div>
@@ -74,17 +74,17 @@
             </ul>
         </div>
         <section class="main-section">
-            <div class="prod-details">
+            <div class="products-details">
                 <div class="flex">
                     <div class="flex details-col">
                         <div>
-                            <div><img src="images/gallery-1.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-1.jpg')"></div>
-                            <div><img src="images/gallery-2.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-2.jpg')"></div>
-                            <div><img src="images/gallery-3.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-3.jpg')"></div>
-                            <div><img src="images/gallery-4.jpg" width="100%" class="mini-imgs" onclick="changeImg('prod-img','images/gallery-4.jpg')"></div>
+                            <div><img src="images/gallery-1.jpg" width="100%" class="mini-imgs" onclick="changeImg('products-img','images/gallery-1.jpg')"></div>
+                            <div><img src="images/gallery-2.jpg" width="100%" class="mini-imgs" onclick="changeImg('products-img','images/gallery-2.jpg')"></div>
+                            <div><img src="images/gallery-3.jpg" width="100%" class="mini-imgs" onclick="changeImg('products-img','images/gallery-3.jpg')"></div>
+                            <div><img src="images/gallery-4.jpg" width="100%" class="mini-imgs" onclick="changeImg('products-img','images/gallery-4.jpg')"></div>
                         </div>
                         <div>
-                            <img src="images/gallery-1.jpg" width="100%" id="prod-img">
+                            <img src="images/gallery-1.jpg" width="100%" id="products-img">
                         </div>
                         
                     </div>
@@ -108,7 +108,7 @@
                 <div class="related-section">
                     <h2>Related Products</h2>
                     <div class="related-img flex">
-                        <div class="prod-images-col">
+                        <div class="products-images-col">
                             <img src="images/product-4.jpg" alt="" width="100%">
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -116,7 +116,7 @@
                                 <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
                             </div>
                         </div>
-                        <div class="prod-images-col">
+                        <div class="products-images-col">
                             <img src="images/product-6.jpg" alt="" width="100%">
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -124,7 +124,7 @@
                                 <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
                             </div>
                         </div>
-                        <div class="prod-images-col">
+                        <div class="products-images-col">
                             <img src="images/product-12.jpg" alt="" width="100%">
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -132,7 +132,7 @@
                                 <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
                             </div>
                         </div>
-                        <div class="prod-images-col">
+                        <div class="products-images-col">
                             <img src="images/product-3.jpg" alt="" width="100%">
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>
@@ -140,7 +140,7 @@
                                 <p id="star">&#9733; &#9733; &#9733; &#9733; &#10032;</p>
                             </div>
                         </div>
-                        <div class="prod-images-col">
+                        <div class="products-images-col">
                             <img src="images/product-5.jpg" alt="" width="100%">
                             <p>Red Printed T-shirt</p>
                             <p>$50.00</p>

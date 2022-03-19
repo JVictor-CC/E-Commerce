@@ -13,8 +13,7 @@ const cartContent = document.querySelector('.cart-content');
 const cartAmount = document.querySelector('.cart-amount');
 const cartTotal = document.querySelector('.cart-total');
 const cartDom = document.querySelector('.cart');
-const cartOverlay = document.querySelector('.cart-overlay');
-const productsDom = document.querySelector('.prod-items');
+const productsDom = document.querySelector('.products-items');
 const cartToggler = document.querySelector('.cart-toggler');
 
 
@@ -30,7 +29,6 @@ class Products{
             let products = data.items;
             */
             
-
             // Load content from contentful
             let contentful = await client.getEntries({
                 content_type: "bullsportsProducts"
@@ -55,9 +53,9 @@ class UI{
         let result = "";
         products.forEach(product => {
             result += `
-            <article class="prod-images-col">
+            <article class="products-images-col">
                 <div>
-                    <img class="prod-img" src=${product.image} alt="product" width="100%">
+                    <img class="products-img" src=${product.image} alt="product" width="100%">
                     <button  class="slide-btn add-cart" data-id=${product.id}>add to cart</button>
                 </div>
                 <a href="products-details.html"><p>${product.title}</p></a>
@@ -70,7 +68,7 @@ class UI{
         });
     productsDom.innerHTML += result;
     } 
-
+    //Get all Products buttons
     getAddCartBtns(){
         const addCart = [...document.querySelectorAll(".add-cart")];
         buttonsDom = addCart;
@@ -99,6 +97,7 @@ class UI{
                 });
         });
     }
+    //update Cart Values
     setCartValues(cart){
         let tempTotal = 0;
         let itemsTotal = 0;
@@ -109,6 +108,7 @@ class UI{
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
         cartAmount.innerText = itemsTotal;
     }
+    
     addCartItem(item){
         const div = document.createElement('div');
         div.classList.add('cart-item');
@@ -133,6 +133,9 @@ class UI{
     hideCart(){
         cartDom.classList.remove('cart-toggler');
     }
+    populateCart(){
+        cart.forEach(item => this.addCartItem(item));
+    }
     setupCart(){
         cart = Storage.getCart();
         this.setCartValues(cart);
@@ -141,8 +144,26 @@ class UI{
         cartBtn.addEventListener('click', this.showCart);
         cartClose.addEventListener('click', this.hideCart);
     }
-    populateCart(){
-        cart.forEach(item => this.addCartItem(item));
+
+
+     clearCart(){
+        let cartItems = cart.map(item => item.id);
+        cartItems.forEach(id => this.removeItem(id));
+        while(cartContent.children.length > 0) {
+            cartContent.removeChild(cartContent.children[0]);
+        }
+        this.hideCart(cart);
+    }
+    removeItem(id){
+        cart = cart.filter(item => item.id !== id);
+        this.setCartValues(cart);
+        Storage.saveCart(cart);
+        let button = this.getSingleAddCartBtn(id);
+        button.disabled = false;
+        button.innerHTML = `add to cart`;
+    }
+    getSingleAddCartBtn(id){
+        return buttonsDom.find(button => button.dataset.id === id);
     }
     cartLogic(){
         cartClear.addEventListener('click', () => {
@@ -177,30 +198,9 @@ class UI{
                     cartContent.removeChild(amountDown.parentElement.parentElement);
                     this.removeItem(id);
                 }
-                
-                
             }
         });
-    }
-    clearCart(){
-        let cartItems = cart.map(item => item.id);
-        cartItems.forEach(id => this.removeItem(id));
-        while(cartContent.children.length > 0) {
-            cartContent.removeChild(cartContent.children[0]);
-        }
-        this.hideCart(cart);
-    }
-    removeItem(id){
-        cart = cart.filter(item => item.id !== id);
-        this.setCartValues(cart);
-        Storage.saveCart(cart);
-        let button = this.getSingleAddCartBtn(id);
-        button.disabled = false;
-        button.innerHTML = `add to cart`;
-    }
-    getSingleAddCartBtn(id){
-        return buttonsDom.find(button => button.dataset.id === id);
-    }
+    }  
 }
 
 // Create a Local Storage for this project
